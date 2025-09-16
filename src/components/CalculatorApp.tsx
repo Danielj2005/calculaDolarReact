@@ -1,3 +1,4 @@
+// import {useEffect} from 'react';
 // styles CSS
 import '../assets/css/CalculatorApp.css';
 import '../assets/css/neonSwitch.css'
@@ -8,9 +9,12 @@ import { Container, Row, Col} from 'react-bootstrap';
 // icons library
 import * as Icon from 'react-bootstrap-icons'; // iconos de bootstrap
 
+// import axios from 'axios'
+// import getPrices from '../../app/scrapper.js' ;
+
 // alerts library
 // import { toast, ToastContainer, Bounce } from 'react-toastify';
-import { ToastContainer, Bounce } from 'react-toastify';
+import { ToastContainer, Bounce, toast } from 'react-toastify';
 
 // toast(`Error al obtener los mensajes del chat, recargue la página por favor.`, {
 //     position: "top-right",
@@ -28,9 +32,23 @@ import { ToastContainer, Bounce } from 'react-toastify';
 function CalculatorApp() {
     
     // const checkOptionsIcons = [ <Icon.CurrencyDollar /> ,"BS", <Icon.CurrencyEuro /> ];
-    const priceDollarBs = 170
-    const priceDollar = 1
-    
+    const bsToUsd = 234.56;
+    const prices = 1;
+
+    const handleChange = () => {
+        toast(`precio actualizado exitosamente.`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+    }
+
     return (
         <>
             <Container className="d-flex justify-content-center align-items-center p-3">
@@ -40,8 +58,8 @@ function CalculatorApp() {
                     
                     <p className="text-center"> 
                         <p className="text-center fw-bold fs-4">Dolar - BCV</p>
-                        <span className="text-center text-success fw-bold fs-4">{`$. ${priceDollar} - `}</span>
-                        <span className="text-center text-danger fw-bold fs-4">{`BS. ${priceDollarBs}`}</span> 
+                        <span className="text-center text-success fw-bold fs-4">{`$. ${prices} - `}</span>
+                        <span className="text-center text-danger fw-bold fs-4">{`BS. ${bsToUsd}`}</span> 
                     </p>
                     
                     <p className="col-12 text-white mb-2">Selecciona una opción.</p>
@@ -79,7 +97,8 @@ function CalculatorApp() {
                                 id="cantidad" 
                                 name="cantidad" 
                                 required 
-                                placeholder="Ingresa un cantidad"/>
+                                placeholder="Ingresa un cantidad"
+                                onChange={handleChange}/>
                         </div>
                         <div className="text-center col-12 d-flex justify-content-center align-items-center">
                             <button className="form-submit-btn w-auto text-white" type="submit">Actualizar Cotización</button>
