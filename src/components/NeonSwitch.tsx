@@ -5,6 +5,7 @@ import { Row, Col} from 'react-bootstrap';
 type switchProps = {
     inputName?: string
     inputId?: string
+    handleClick?: () => void
 }
 
 
@@ -25,7 +26,7 @@ function NeonSwitch(props: switchProps) {
                                 id={inputId}
                                 type="checkbox"
                                 name={inputName}
-                                onClick={handleClick? handleClick : ''}
+                                onClick={handleClick ? handleClick : undefined}
                             />
                             <div className="button">
                                 <span className="button-toggle"></span>
