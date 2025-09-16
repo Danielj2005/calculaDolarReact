@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
 
 import CalculatorApp from './components/CalculatorApp';
-// import Register from './components/register;'
+import RegisterClientApiDollar from './components/RegisterClientApiDollar'
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<CalculatorApp/>}></Route>
-                    {/* <Route path="/register" element={<Register/>}></Route> */}
+                    {<Route path="/registerClient" element={<RegisterClientApiDollar/>}></Route>}
                 </Routes>
             </BrowserRouter>
         </>
