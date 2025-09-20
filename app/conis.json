@@ -1,0 +1,6 @@
+{
+    "USD": "https://s3.amazonaws.com/dolartoday/data.json",
+    "EUR": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+    "CNY": "https://www.boc.cn/sourcedb/whpj/enindex.html",
+    "TRY": "https://www.tcmb.gov.tr/kurlar/today.xml"
+}

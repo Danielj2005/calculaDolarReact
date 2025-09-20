@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
 
-import CalculatorApp from './components/CalculatorApp';
+import MainPage from './components/MainPage';
 import RegisterClientApiDollar from './components/RegisterClientApiDollar'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<CalculatorApp/>}></Route>
+                    <Route path="/" element={<MainPage />}></Route>
                     {<Route path="/registerClient" element={<RegisterClientApiDollar/>}></Route>}
                 </Routes>
             </BrowserRouter>
