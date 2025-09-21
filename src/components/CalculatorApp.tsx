@@ -17,7 +17,7 @@ function CalculatorApp() {
 
     const baseCotizacion = 1;
 
-    const handleChange = (e: <ReactEventHandler>) => {
+    const handleChange = (e) => {
         const value =  parseFloat(e.target.value)
         let data;
 
