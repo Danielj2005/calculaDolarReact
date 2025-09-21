@@ -1,3 +1,4 @@
+import * as React from 'react'
 import '../assets/css/CalculatorApp.css';
 import '../assets/css/neonSwitch.css'
 import { Container, Row, Col} from 'react-bootstrap';
