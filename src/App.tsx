@@ -12,7 +12,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<MainPage />}></Route>
-                    {<Route path="/registerClient" element={<RegisterClientApiDollar/>}></Route>}
+                    <Route path="/registerClient" element={<RegisterClientApiDollar/>}></Route>
                 </Routes>
             </BrowserRouter>
         </>

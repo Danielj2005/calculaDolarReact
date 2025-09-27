@@ -21,7 +21,7 @@ function CotizacionBCV() {
     useEffect(() => {
 
 
-        axios.get('http://localhost:3000/getPriceBCV',{params:  { coin: COIN } })
+        axios.get('https://dollarapi.onrender.com/prices',{params:  { coin: COIN } })
             .then(response => {
 
                 // pricesBCV = JSON.parse(response.data);
