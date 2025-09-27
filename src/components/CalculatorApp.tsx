@@ -113,9 +113,9 @@ function CalculatorApp() {
 
     const cantCommon = [5,10,20,50,100]; // cantidaddes comunes para calcular
 
-    const handlerCantidadComun = (e: React.MouseEvent<HTMLButtonElement>) => {
-        const target = e.target.value;
-        const data = parseInt(target)
+    const handlerCantidadComun = (event: React.MouseEvent<HTMLButtonElement>) => {
+        const target = event.target as HTMLButtonElement;
+        const data = parseInt(target.value)
         setCant(data);
     }
 
